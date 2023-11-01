@@ -9,7 +9,7 @@ public class Post
     private int _votes;
     private DateTime _createdAt;
 
-    public DateTime CreatedAt { get { return _createdAt.Date; } }
+    public DateTime CreatedAt { get { return _createdAt; } }
     public int Votes { get { return _votes; } private set { _votes = value; } }
     public string Title { get; }
     public string Description { get; }
