@@ -8,11 +8,20 @@ namespace csharp_oop_intermediate.Engine
 {
     public static class WorkflowEngine
     {
-        public static void Run(Workflow workflow)
+        public static void Run(IWorkflow workflow)
         {
-            foreach (IActivity activity in workflow.Activities)
+            foreach (IActivity activity in workflow.GetTasks())
             {
-                activity.Execute();
+                try
+                {
+                    activity.Execute();
+                }
+                catch (Exception)
+                {
+                    // logging
+                    // terminate and persist state of workflow (in db or file) to resume later
+                    throw;
+                }
             }
         }
     }
