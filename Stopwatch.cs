@@ -3,16 +3,16 @@
 public class Stopwatch
 {
     /* Class with Static members */
-    private static DateTime? Time { get; set; }
-	private static TimeSpan ElapsedTime { get; set; }
+    private static DateTime? _time;
+    private static TimeSpan _elapsedTime;
 
 	public static DateTime Start()
     {
-		if (Time == null)
+		if (_time == null)
         {
-			Time = DateTime.Now;
-            Console.WriteLine($"The current time is: {Time.Value}");
-			return Time.Value;
+			_time = DateTime.Now;
+            Console.WriteLine($"The current time is: {_time.Value}");
+			return _time.Value;
         }
         else
         {
@@ -22,12 +22,12 @@ public class Stopwatch
 
 	public static TimeSpan Stop()
     {
-        if (Time != null)
+        if (_time != null)
         {
-			ElapsedTime = DateTime.Now - Time.Value;
-			Time = null;
-            Console.WriteLine($"Time elapsed: {ElapsedTime}. Resetting Stopwatch.");
-			return ElapsedTime;
+			_elapsedTime = DateTime.Now - _time.Value;
+			_time = null;
+            Console.WriteLine($"Time elapsed: {_elapsedTime}. Resetting Stopwatch.");
+			return _elapsedTime;
         }
         else
         {
