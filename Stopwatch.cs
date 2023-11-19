@@ -3,10 +3,8 @@
 public class Stopwatch
 {
     /* Class with Static members */
-	
-    public static DateTime? Time { get; set; }
-
-	public static TimeSpan ElapsedTime { get; set; }
+    private static DateTime? Time { get; set; }
+	private static TimeSpan ElapsedTime { get; set; }
 
 	public static DateTime Start()
     {
