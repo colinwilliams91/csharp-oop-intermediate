@@ -14,7 +14,7 @@ public class Stopwatch
         }
 
         _time = DateTime.Now;
-        Console.WriteLine($"The current time is: {_time.Value}");
+        Console.WriteLine($"The current time is: {_time.Value}. Stopwatch started.");
         return _time.Value;
     }
 
@@ -27,7 +27,7 @@ public class Stopwatch
 
 		_elapsedTime = DateTime.Now - _time.Value;
 		_time = null;
-        Console.WriteLine($"Time elapsed: {_elapsedTime}. Resetting Stopwatch.");
+        Console.WriteLine($"Stopwatch stopped. Time elapsed: {_elapsedTime}. Resetting Stopwatch.");
 		return _elapsedTime;
     }
 }

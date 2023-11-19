@@ -1,5 +1,6 @@
 ﻿using System;
 
+Console.WriteLine();
 Console.WriteLine($"Stopwatch Assignment Begin Here:");
 
 //Console.WriteLine(Stopwatch.Start());
@@ -12,7 +13,9 @@ Console.WriteLine($"Stopwatch Assignment Begin Here:");
 
 Stopwatch.Start();
 
-Thread.Sleep(1000);
+Console.WriteLine();
+Console.WriteLine($"Press Enter to stop the Stopwatch");
+Console.ReadLine();
 
 Stopwatch.Stop();
 
