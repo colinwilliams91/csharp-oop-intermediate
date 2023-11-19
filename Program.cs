@@ -15,6 +15,7 @@ Stopwatch.Start();
 Stopwatch.Stop();
 
 Console.WriteLine("---");
+Console.WriteLine($"Social Post Assignment Begin Here:");
 
 Post one = new Post("My name is Colin", "I am an application developer for the Louisiana Department of Health CDC SHHP.");
 
