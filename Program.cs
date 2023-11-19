@@ -49,7 +49,13 @@ Console.ReadLine();
 Console.WriteLine("Workflow Engine Challenge Begin:");
 Console.WriteLine();
 
-var videoEncodingActivities = new List<IActivity> { new Upload(), new Request(), new Emailer(), new Update() };
-var videoEncodingWorkflow = new Workflow(videoEncodingActivities);
+//var videoEncodingActivities = new List<IActivity> { new Upload(), new Request(), new Emailer(), new Update() };
+var videoEncodingWorkflow = new Workflow();
+
+videoEncodingWorkflow.Add(new Upload());
+videoEncodingWorkflow.Add(new Request());
+videoEncodingWorkflow.Add(new Emailer());
+videoEncodingWorkflow.Add(new Update());
 
 WorkflowEngine.Run(videoEncodingWorkflow);
+Console.WriteLine();
