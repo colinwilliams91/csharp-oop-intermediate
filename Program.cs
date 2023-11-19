@@ -12,6 +12,8 @@ Console.WriteLine($"Stopwatch Assignment Begin Here:");
 
 Stopwatch.Start();
 
+Thread.Sleep(1000);
+
 Stopwatch.Stop();
 
 Console.WriteLine("---");
